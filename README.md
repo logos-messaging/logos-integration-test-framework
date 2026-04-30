@@ -22,7 +22,7 @@ In your module's test repo (e.g. `logos-chat-module/tests/integration/`):
 # pyproject.toml
 [project.optional-dependencies]
 test = [
-    "logos-integration-test-framework @ git+https://github.com/logos-co/integration-tests.git@<commit-sha>",
+    "logos-integration-test-framework @ git+https://github.com/logos-messaging/integration-tests.git@<commit-sha>",
     "pytest>=8.0",
 ]
 ```
