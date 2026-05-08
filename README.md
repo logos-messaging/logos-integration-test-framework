@@ -22,7 +22,7 @@ In your module's test repo (e.g. `logos-chat-module/tests/integration/`):
 # pyproject.toml
 [project.optional-dependencies]
 test = [
-    "logos-integration-test-framework @ git+https://github.com/logos-messaging/integration-tests.git@<commit-sha>",
+    "logos-integration-test-framework @ git+https://github.com/logos-messaging/logos-integration-test-framework.git@<commit-sha>",
     "pytest>=8.0",
 ]
 ```
@@ -92,7 +92,7 @@ pytest tests/unit -q       # 13 tests: surface check + waits.py
 
 `pip install -e '.[dev]'` is **required** before `pytest` — otherwise the entry-point isn't registered and the smoke test (`tests/test_smoke.py`) won't see the `local_*` fixtures. CI does this automatically.
 
-Lint / type / unit runs are gated in `.github/workflows/unit.yml` (Python 3.11 + 3.12). Direct pushes to `master` are rejected by branch-protection rules; merge via PR with green CI.
+Lint / type / unit runs are gated in `.github/workflows/unit.yml` (Python 3.11 – 3.14). Direct pushes to `master` are rejected by branch-protection rules; merge via PR with green CI.
 
 ## Related
 
