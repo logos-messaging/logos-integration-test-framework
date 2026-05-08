@@ -13,10 +13,8 @@ requires-python = ">=3.11"
 license = { text = "MIT OR Apache-2.0" }
 authors = [{ name = "IFT QA" }]
 dependencies = [
-    # logoscore is not on PyPI. Pinned to PR #1 head SHA, not the branch name,
-    # so an upstream force-push can't silently change what we install.
-    # Re-pin to `@master` after https://github.com/logos-co/logos-logoscore-py/pull/1 merges.
-    "logoscore @ git+https://github.com/logos-co/logos-logoscore-py.git@6e7155733d90a66d117211c33322594e1b50e742",
+    # logoscore is not on PyPI; installed via direct git reference against upstream master.
+    "logoscore @ git+https://github.com/logos-co/logos-logoscore-py.git@master",
 ]
 
 [project.optional-dependencies]
